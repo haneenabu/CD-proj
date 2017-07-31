@@ -69,6 +69,23 @@ public class App {
                         System.out.println(individualCD.price);
                     }
                 }
+            }else if (navigationChoice.equals("Add CD")){
+                System.out.println("Alright, let's add a CD! What was the year of the album?");
+                int userYear = Integer.parseInt(bufferedReader.readLine());
+                System.out.println("Great! What is the name of the artist?");
+                String userArtist = bufferedReader.readLine();
+                System.out.println("Got it! What is the name of the album?");
+                String userAlbum = bufferedReader.readLine();
+                System.out.println("Finally, what is the price?");
+                int userPrice = Integer.parseInt(bufferedReader.readLine());
+                CD userCD = new CD(userArtist, userAlbum, userYear, userPrice);
+                System.out.println("Alright, here's your new CD:");
+                System.out.println("------------------");
+                System.out.println(userCD.artistName);
+                System.out.println(userCD.albumName);
+                System.out.println(userCD.releaseYear);
+                System.out.println(userCD.price);
+
             }else{
                 System.out.println("oops");
             }
